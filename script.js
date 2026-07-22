@@ -51,4 +51,28 @@
 
   // Download / print
   document.getElementById("downloadPdf").addEventListener("click", () => window.print());
+
+  // Scroll progress bar
+  const progress = document.getElementById("scrollProgress");
+  const updateProgress = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+    progress.style.width = `${pct}%`;
+  };
+  document.addEventListener("scroll", updateProgress, { passive: true });
+  updateProgress();
+
+  // Reveal-on-scroll
+  const reveal = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          reveal.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  document.querySelectorAll(".reveal").forEach((el) => reveal.observe(el));
 })();
