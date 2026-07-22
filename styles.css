@@ -390,6 +390,31 @@ p.small { font-size: 0.85em; }
 }
 .badges-stats strong { color: var(--accent); }
 
+.credential-list {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.credential-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.credential-list li:last-child { border-bottom: none; padding-bottom: 0; }
+.cred-name { font-size: 0.9em; }
+.cred-meta {
+  font-family: var(--mono);
+  font-size: 0.78em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
 footer {
   margin-top: 40px;
   padding-top: 20px;
