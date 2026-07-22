@@ -103,6 +103,38 @@ a { color: var(--accent); }
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+  flex-shrink: 0;
+}
+.brand-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 0.8em;
+  letter-spacing: 0.02em;
+}
+.brand-name {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 0.85em;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .brand-name { display: none; }
+}
+
 .nav-links {
   display: flex;
   gap: 4px;
