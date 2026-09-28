@@ -1,13 +1,15 @@
 # profile
 
 <!-- repository-summary -->
-A lightweight plaintext-style resume website deployed with GitHub Pages.
+Redirects the older GitHub Pages resume URL to the user site.
 <!-- /repository-summary -->
 
-Personal resume, hosted as a plaintext-style static page on GitHub Pages.
+This project Pages site used to host the resume at:
 
-Live: https://iarsingh.github.io/profile/
+https://iarsingh.github.io/profile/
 
-## Update
+The live resume is now the GitHub user site:
 
-Edit `index.html` and push to `main` — GitHub Pages redeploys automatically.
+https://iarsingh.github.io/
+
+Source: https://github.com/iarsingh/iarsingh.github.io
